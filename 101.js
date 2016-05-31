@@ -1,4 +1,4 @@
-console.log("hello")
+
 // Example
 
 // The purpose of this first exercise is just to show how 
@@ -8,6 +8,12 @@ console.log("hello")
 // Part EXAMPLE
 
 // Write a function called addOne() that returns the input number, plus one. 
+
+
+console.log("hello")
+var addOne = function(input) {
+	return input + 1
+}
 
 console.assert(addOne(1) === 2)
 
