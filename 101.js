@@ -15,6 +15,7 @@ var addOne = function(input) {
 	return input + 1
 }
 
+
 console.assert(addOne(1) === 2)
 
 // Part 0
@@ -23,6 +24,7 @@ console.assert(addOne(1) === 2)
 
 var doubleNum = function(num) {
 	var newNum = num * 2
+	return newNum
 }
 
 console.assert(doubleNum(5) === 10)
@@ -34,6 +36,11 @@ console.assert(doubleNum(5) === 10)
  * Write a function called sum that takes two numbers as
  * inputs and computes the sum of those two numbers.
  */
+var sum=function(num1,num2) {
+    var sumOf2= num1+num2
+    return sumOf2
+}
+
 
 
 console.assert(sum(8, 11) === 19);
@@ -46,6 +53,14 @@ console.assert(sum(4, 100) === 104);
 // repeating yourself, use your sum function inside 
 // of your average function.
 
+var average = function (input1, input2) {
+    var averageOf2 = sum(input1,input2)/2
+    return averageOf2
+}
+   
+console.log(average(5,9))
+    
+
 
 console.assert(average(8,12) === 10)
 console.assert(average(100,200) === 150)
@@ -56,6 +71,21 @@ console.assert(average(100,200) === 150)
  * Modify your sum function so that if either of its 
  inputs is not a number, it will return "null."
  */
+
+ 
+
+ var sum = function(num1,num2) {
+        var sumOf2 = num1+num2;
+        if((typeof num1)&&(typeof num2)==='number') {
+        return sumOf2
+        }
+        else 
+    	{return "null"}
+    }
+    
+    console.log(sum('5',true));
+
+
 
 
 console.assert(sum(867, 5309) === 6176);
@@ -68,6 +98,14 @@ console.assert(sum(true, 5) === null);
 // Write a function called isNegative that will tell 
 // whether a number is negative or not. 
 
+var isNegative = function(num) {
+    if(num < 0)
+    {return true}
+    else
+    {return false}
+}
+log(isNegative(-1))
+
 console.assert(isNegative(10) === false)
 console.assert(isNegative(0) === false)
 console.assert(isNegative(-999) === true)
@@ -78,7 +116,11 @@ console.assert(isNegative(-999) === true)
 // To avoid repeating yourself, use your isNegative 
 // function inside your sum funciton ***
 
-console.assert(sum(5,-5) === null)
+
+
+
+
+rfconsole.assert(sum(5,-5) === null)
 
 
 // Part 5
