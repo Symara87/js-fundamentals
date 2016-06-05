@@ -76,7 +76,7 @@ console.assert(average(100,200) === 150)
 
  var sum = function(num1,num2) {
         var sumOf2 = num1+num2;
-        if((typeof num1)&&(typeof num2)==='number') {
+        if((typeof num1==='number')&&(typeof num2==='number')) {
         return sumOf2
         }
         else 
@@ -116,11 +116,15 @@ console.assert(isNegative(-999) === true)
 // To avoid repeating yourself, use your isNegative 
 // function inside your sum funciton ***
 
+var sum=function(num1,num2) {
+    if ( isNegative(num1) || isNegative(num2) ) {
+        return null
+    }
+    else {return (num1 + num2)
+    }
+}
 
-
-
-
-rfconsole.assert(sum(5,-5) === null)
+console.assert(sum(5,-5) === null)
 
 
 // Part 5
@@ -128,6 +132,39 @@ rfconsole.assert(sum(5,-5) === null)
 // Write a function that will find the minimum of four 
 // input numbers. You can do it using nested if statements,
 // boolean operators, or both (but not neither). 
+
+var min = function(inp1,inp2,inp3,inp4) {
+    if(inp1<inp2){
+        if(inp1<inp3){
+            if(inp1<inp4){
+                return inp1
+            }
+        }
+    }  
+    
+    else if(inp2<inp1){     
+        if(inp2<inp3){
+            if(inp2<inp4){
+                return inp2
+          }
+        }
+     }
+    else if(inp3<inp1){
+        if(inp3<inp2){
+            if(inp3<inp4){    
+                return inp3
+            }
+        }
+    }  
+        else {
+            return inp4
+        }
+    
+}
+       
+  log(min(7,3,9,6))     
+
+
 
 console.assert(minimum(1,2,4,0) === 0)
 console.assert(minimum(1000,-2,-99,50) === -99)
@@ -140,6 +177,13 @@ console.assert(minimum(1000,-2,99,50) === -2)
 // Using logical operators, write a function that will
 // return true if either input is a string, but not 
 // both or neither. 
+
+
+var justOneString = function(inp1,inp2) {
+if (typeof) {}
+
+
+}
 
 console.assert(justOneString('a',5) === true)
 console.assert(justOneString(6,'dotron') === true)
@@ -155,6 +199,12 @@ console.assert(justOneString(8,null) === false)
 // For testing purposes, I've included some functions that
 // modify global variables, although that's not a good
 // pattern for production code.
+
+ var doTwice = function(inputFun) {
+      inputFun()
+      inputFun()
+    }
+
 
 var NUMBER = 10
 
