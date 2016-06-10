@@ -4,6 +4,28 @@
  * Write a function that calculates the sum of all the numbers in an array
  */
 
+var auspiciousNumbers = [13,4,11,8]
+  
+
+var calculateSum = function(iAddYouUp){
+    var sum = 0
+    for(var i=0; i < iAddYouUp.length; i++){
+        // log(luckyNumbers[i])
+        // log(luckyNumbers.length)
+        sum = sum + iAddYouUp[i]
+        
+    }
+		return sum
+  }
+  
+ 
+log(calculateSum(auspiciousNumbers))
+
+
+
+
+}
+	cnosole.log(calculateSum([])===)
 
 
 console.assert(sumOfArray([1, 2]) === 3);
@@ -13,9 +35,40 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 
 // PART 1
 
+// my thought process 
+// im going to give you an array of numbers. i want you to iterate over every position in the array. as you iterate over each position of the aray (that is less then the length of the array), log its value. look at its value. if the value at position 0 is greater than the value of all the subsequent positions less than the length of the array return it. if not, look the value of position 2. if the value is greater than the values of all the subsequent positions less than the length of the array, return it. continue to to do this until you have found the position of the number that is greatest than all of the other positions 
+
+
+// var luckyNumbers = [13 ,15, 19, 4, 5, 7, ]
+
+// var maxOfArray = function(){          
+//  for(var i = 0; i<luckyNumbers.length; i=i+1){
+// 	if(luckyNumbers[i] > i<luckyNumbers.length){
+// log(luckyNumbers[i])
+//     }
+// }
+// 	// return luckyNumbers[i]
 // Write a function maxOfArray() that takes an array of
 // numbers as an argument and finds the highest number.
+v
+ar luckyNums = [10,5,4,9,13,56,24] 
 
+var maxOfArray = function(nums){
+ { if (nums[0] > nums[1]) { 
+  var max = nums[0]
+ } 
+  else {
+  var max = nums[1]
+  }
+ for(var i = 2; i<nums.length; i=i+1){ 
+     var testNum = nums[i] 
+     if (testNum > max) { 
+         max = testNum
+} 
+ } return max 
+  }
+}
+log(maxOfArray(luckyNums))
 
 console.assert(maxOfArray([2,4,3]) === 4)
 console.assert(maxOfArray([10,9,8,100,7,6]) === 100)
@@ -46,7 +99,14 @@ console.assert(isVowel("E") === true);
  * reverse("skoob") should return the
  * string "books".
  */
-
+var stringReverse = function(inputString){
+	var outputString = " "
+    for(var i = inputString.length - 1; i >= 0; i=i-1){
+    outputString = outputString + inputString[i]
+    }
+	return outputString
+}
+log(stringReverse("your doing great"))
 
 console.assert(reverse("books") === "skoob")
 console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew")
