@@ -50,8 +50,7 @@ console.assert(sumOfArray([10, 9, 8]) === 27);
 // 	// return luckyNumbers[i]
 // Write a function maxOfArray() that takes an array of
 // numbers as an argument and finds the highest number.
-v
-ar luckyNums = [10,5,4,9,13,56,24] 
+var luckyNums = [10,5,4,9,13,56,24] 
 
 var maxOfArray = function(nums){
  { if (nums[0] > nums[1]) { 
@@ -81,6 +80,23 @@ console.assert(isNaN(maxOfArray([1,2,'bucklemyshoe'])))
  * and returns true if it is a vowel, false otherwise.
  */
 
+var isVowel = function(character){
+    var vowels = 'aeiou'
+  for(var i = 0; i<vowels.length; i=i+1){
+  // log(vowels[i])
+            if(character === vowels[i]){
+                return true
+            }
+            
+               
+            
+    } 
+        return false 
+}    
+       
+       
+
+log(isVowel("a"))
 function isVowel(symbol){
     // YOUR CODE HERE
 }
@@ -121,6 +137,25 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
  * - for every number that is a multiple of 5 (but not 3), return "buzz"
  * - for every number that is a multiple of 3 and 5, return "fizzbuzz"
  */
+
+
+
+ 
+   var fizzBuzz = function(someNumber){
+     if(someNumber%3 ===0 && someNumber%5 ===0){
+    return "fizzBuzz"} 
+else if(someNumber%3 === 0){
+    return "fizz"
+}
+else if(someNumber%5 ===0){
+  return "buzz"
+} 
+ else {
+  return "."
+ }
+}
+ 
+ 
 
 
 
